@@ -17,17 +17,41 @@ const K = (arr, k) => {
   return arr[k - 1];
 };
 
-console.log(K([1, 2, 6, 4, 5], 3));
 console.log(K([-10, -25, -47, -36, 0], 1));
 
 //Second Problem Solution
-const swap = (arr) => {
-  [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
-  return arr;
+// const swap = (arr) => {
+//   [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+//   return arr;
+// };
+
+// console.log(swap([1, 2, 3, 4]));
+// console.log(swap([0, 2, 1]));
+// console.log(swap([3]));
+
+//Alternate solution
+const secondProblem = (x) => {
+  if (x.length > 1) {
+    let temp = x[0];
+    x[0] = x[x.length - 1];
+    x[x.length - 1] = temp;
+  }
+  return ar;
 };
 
-console.log(swap([1, 2, 3, 4]));
 console.log(swap([0, 2, 1]));
-console.log(swap([3]));
 
 //Third Problem Solution
+
+const thirdProblem = (x, y) => {
+  let ans = 0;
+  for (let i = 0; i < x.length; i++) {
+    for (let j = 0; j < y.length; j++) {
+      if (x[i] === y[j]) {
+        ans++;
+      }
+    }
+  }
+  return ans;
+};
+console.log(thirdProblem([2, 9, 8, 7], [6, 8, 3, 1]));
